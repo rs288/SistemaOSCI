@@ -94,14 +94,14 @@ public class Sistema extends javax.swing.JFrame {
     public void ListarProductos() {
         List<Productos> ListarPro = proDao.ListarProductos();
         modelo = (DefaultTableModel) TableProducto.getModel();
-        Object[] ob = new Object[6];
+        Object[] ob = new Object[5];
         for (int i = 0; i < ListarPro.size(); i++) {
-            ob[0] = ListarPro.get(i).getId();
-            ob[1] = ListarPro.get(i).getCodigo();
-            ob[2] = ListarPro.get(i).getNombre();
-            ob[3] = ListarPro.get(i).getProveedorPro();
-            ob[4] = ListarPro.get(i).getStock();
-            ob[5] = ListarPro.get(i).getPrecio();
+            //ob[0] = ListarPro.get(i).getId();
+            ob[0] = ListarPro.get(i).getCodigo();
+            ob[1] = ListarPro.get(i).getNombre();
+            ob[2] = ListarPro.get(i).getProveedorPro();
+            ob[3] = ListarPro.get(i).getStock();
+            ob[4] = ListarPro.get(i).getPrecio();
             modelo.addRow(ob);
         }
         TableProducto.setModel(modelo);
@@ -218,7 +218,7 @@ public class Sistema extends javax.swing.JFrame {
         TableVentas = new javax.swing.JTable();
         btnPdfVentas = new javax.swing.JButton();
         txtIDVentas = new javax.swing.JTextField();
-        Info = new javax.swing.JPanel();
+        Config = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -1075,52 +1075,57 @@ public class Sistema extends javax.swing.JFrame {
 
         btnActualizarConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Actualizar (2).png"))); // NOI18N
         btnActualizarConfig.setText("ACTUALIZAR");
+        btnActualizarConfig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarConfigActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout InfoLayout = new javax.swing.GroupLayout(Info);
-        Info.setLayout(InfoLayout);
-        InfoLayout.setHorizontalGroup(
-            InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InfoLayout.createSequentialGroup()
-                .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(InfoLayout.createSequentialGroup()
+        javax.swing.GroupLayout ConfigLayout = new javax.swing.GroupLayout(Config);
+        Config.setLayout(ConfigLayout);
+        ConfigLayout.setHorizontalGroup(
+            ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfigLayout.createSequentialGroup()
+                .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConfigLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(InfoLayout.createSequentialGroup()
+                        .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ConfigLayout.createSequentialGroup()
                                 .addComponent(jLabel28)
                                 .addGap(30, 30, 30)
-                                .addComponent(txtTelefonoConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(InfoLayout.createSequentialGroup()
-                                .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtTelefonoConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ConfigLayout.createSequentialGroup()
+                                .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel26)
                                     .addComponent(jLabel27))
                                 .addGap(34, 34, 34)
-                                .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtNombreConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtDireccionConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(InfoLayout.createSequentialGroup()
+                    .addGroup(ConfigLayout.createSequentialGroup()
                         .addGap(273, 273, 273)
                         .addComponent(btnActualizarConfig)))
                 .addContainerGap(253, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ConfigLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel25)
                 .addGap(180, 180, 180))
         );
-        InfoLayout.setVerticalGroup(
-            InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InfoLayout.createSequentialGroup()
+        ConfigLayout.setVerticalGroup(
+            ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfigLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel25)
                 .addGap(45, 45, 45)
-                .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel26)
                     .addComponent(txtNombreConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
                     .addComponent(txtDireccionConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
-                .addGroup(InfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(ConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(txtTelefonoConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
@@ -1128,7 +1133,7 @@ public class Sistema extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
-        Contenedor.addTab("Config", Info);
+        Contenedor.addTab("Config", Config);
 
         getContentPane().add(Contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 660, 400));
 
@@ -1257,6 +1262,8 @@ public class Sistema extends javax.swing.JFrame {
     private void btnConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigActionPerformed
         // TODO add your handling code here:
         Contenedor.setSelectedIndex(5);
+         ListarConfig();
+        
     }//GEN-LAST:event_btnConfigActionPerformed
 
     private void btnGenerarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarVentaActionPerformed
@@ -1479,6 +1486,21 @@ public class Sistema extends javax.swing.JFrame {
         LimpiarProductos();
     }//GEN-LAST:event_btnNuevoProActionPerformed
 
+    private void btnActualizarConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarConfigActionPerformed
+        // TODO add your handling code here:
+        if (!"".equals(txtNombreConfig.getText()) || !"".equals(txtTelefonoConfig.getText()) || !"".equals(txtDireccionConfig.getText())) {
+            conf.setNombre(txtNombreConfig.getText());
+            conf.setTelefono(txtTelefonoConfig.getText());
+            conf.setDireccion(txtDireccionConfig.getText());
+            //conf.setId(Integer.parseInt(txtIdConfig.getText()));
+            proDao.ModificarDatos(conf);
+            JOptionPane.showMessageDialog(null, "Datos de la empresa modificado");
+            ListarConfig();
+        } else {
+            JOptionPane.showMessageDialog(null, "Los campos estan vacios");
+        }                                                 
+    }//GEN-LAST:event_btnActualizarConfigActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1521,6 +1543,7 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JLabel Cantidad_Productos;
     private javax.swing.JPanel Clientes;
     private javax.swing.JLabel Codigo_Productos;
+    private javax.swing.JPanel Config;
     private javax.swing.JTabbedPane Contenedor;
     private javax.swing.JLabel Correo_ventas;
     private javax.swing.JLabel Descripcion_Productos;
@@ -1528,7 +1551,6 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JLabel Direccion_Proveedor;
     private javax.swing.JLabel ID_NuevaVenta;
     private javax.swing.JLabel ID_ventas;
-    private javax.swing.JPanel Info;
     private javax.swing.JLabel LabelTotal;
     private javax.swing.JPanel MenuPanel;
     private javax.swing.JLabel MenuTitle;

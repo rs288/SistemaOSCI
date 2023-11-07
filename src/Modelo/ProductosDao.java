@@ -176,7 +176,7 @@ public class ProductosDao {
     }
     
     public boolean ModificarDatos(Config conf){
-       String sql = "UPDATE config SET nombre=?, telefono=?, direccion=? WHERE id=?";
+       String sql = "UPDATE config SET nombre=?, telefono=?, direccion=? WHERE id=1";
        try {
            ps = con.prepareStatement(sql);
            ps.setString(1, conf.getNombre());
