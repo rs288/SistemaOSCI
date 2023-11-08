@@ -11,7 +11,7 @@ public class Conexion {
     public Connection getConnection(){
         try {
             String myBD = "jdbc:mysql://localhost:3306/SistemaOSCI?serverTimezone=UTC";
-            con = DriverManager.getConnection(myBD,"root","Ebqevtb123#");
+            con = DriverManager.getConnection(myBD,"root"," ");
             return con;
         
         } catch (SQLException e) {

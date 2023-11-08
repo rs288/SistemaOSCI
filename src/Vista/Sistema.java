@@ -601,9 +601,11 @@ public class Sistema extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                 .addGroup(NuevaVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(StockDis_NuevaVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStockDisponible))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 55, Short.MAX_VALUE)
-                .addComponent(btnEliminarVenta))
+                    .addGroup(NuevaVentaLayout.createSequentialGroup()
+                        .addComponent(txtStockDisponible, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                        .addGap(34, 34, 34)
+                        .addComponent(btnEliminarVenta)
+                        .addGap(21, 21, 21))))
             .addGroup(NuevaVentaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(NuevaVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -634,7 +636,7 @@ public class Sistema extends javax.swing.JFrame {
                         .addComponent(TotalAPagar_NuevaVenta)
                         .addGap(52, 52, 52)
                         .addComponent(LabelTotal)
-                        .addGap(26, 259, Short.MAX_VALUE))))
+                        .addGap(26, 260, Short.MAX_VALUE))))
         );
         NuevaVentaLayout.setVerticalGroup(
             NuevaVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

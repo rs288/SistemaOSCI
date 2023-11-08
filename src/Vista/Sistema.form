@@ -258,10 +258,13 @@
                       <EmptySpace pref="119" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="StockDis_NuevaVenta" max="32767" attributes="0"/>
-                          <Component id="txtStockDisponible" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtStockDisponible" pref="99" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="btnEliminarVenta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="unrelated" pref="55" max="32767" attributes="0"/>
-                      <Component id="btnEliminarVenta" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -299,7 +302,7 @@
                               <Component id="TotalAPagar_NuevaVenta" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                               <Component id="LabelTotal" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="26" pref="259" max="32767" attributes="0"/>
+                              <EmptySpace min="26" pref="260" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
