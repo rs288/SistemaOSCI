@@ -158,7 +158,7 @@ public class ProductosDao {
     }
     public Config BuscarDatos(){
         Config conf = new Config();
-        String sql = "SELECT * FROM config";
+        String sql = "SELECT * FROM configu";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -176,13 +176,12 @@ public class ProductosDao {
     }
     
     public boolean ModificarDatos(Config conf){
-       String sql = "UPDATE config SET nombre=?, telefono=?, direccion=? WHERE id=1";
+       String sql = "UPDATE configu SET nombre=?, telefono=?, direccion=? WHERE id=1";
        try {
            ps = con.prepareStatement(sql);
            ps.setString(1, conf.getNombre());
            ps.setString(2, conf.getTelefono());
            ps.setString(3, conf.getDireccion());
-           ps.setInt(5, conf.getId());
            ps.execute();
            return true;
        } catch (SQLException e) {

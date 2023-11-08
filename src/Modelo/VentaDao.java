@@ -112,7 +112,8 @@ public class VentaDao {
     
     public List Listarventas(){
        List<Venta> ListaVenta = new ArrayList();
-       String sql = "SELECT c.id AS id_cli, c.nombre, v.* FROM clientes c INNER JOIN ventas v ON c.id = v.cliente";
+       String sql = "SELECT * FROM ventas";
+       //String sql = "SELECT c.id AS id_cli, c.nombre, v.* FROM clientes c INNER JOIN ventas v ON c.id = v.cliente";
        try {
            con = cn.getConnection();
            ps = con.prepareStatement(sql);
@@ -120,7 +121,7 @@ public class VentaDao {
            while (rs.next()) {               
                Venta vent = new Venta();
                vent.setId(rs.getInt("id"));
-               vent.setNombre_cli(rs.getString("nombre"));
+               vent.setCliente(rs.getString("cliente"));
                vent.setVendedor(rs.getString("vendedor"));
                vent.setTotal(rs.getDouble("total"));
                ListaVenta.add(vent);
@@ -150,7 +151,7 @@ public class VentaDao {
         }
         return cl;
     }
-    public void pdfV(int idventa, int Cliente, double total, String usuario) {
+    public void pdfV(int idventa, String Cliente, double total, String usuario) {
         try {
             Date date = new Date();
             FileOutputStream archivo;
@@ -176,15 +177,15 @@ public class VentaDao {
             Encabezado.addCell(img);
             Encabezado.addCell("");
             //info empresa
-            String config = "SELECT * FROM config";
+            String config = "SELECT * FROM configu";
             String mensaje = "";
             try {
                 con = cn.getConnection();
                 ps = con.prepareStatement(config);
                 rs = ps.executeQuery();
                 if (rs.next()) {
-                    mensaje = rs.getString("mensaje");
-                    Encabezado.addCell("Ruc:    " + rs.getString("ruc") + "\nNombre: " + rs.getString("nombre") + "\nTeléfono: " + rs.getString("telefono") + "\nDirección: " + rs.getString("direccion") + "\n\n");
+                    //mensaje = rs.getString("mensaje");
+                    Encabezado.addCell("\nNombre: " + rs.getString("nombre") + "\nTeléfono: " + rs.getString("telefono") + "\nDirección: " + rs.getString("direccion") + "\n\n");
                 }
             } catch (SQLException e) {
                 System.out.println(e.toString());
@@ -216,12 +217,12 @@ public class VentaDao {
             String prove = "SELECT * FROM clientes WHERE id = ?";
             try {
                 ps = con.prepareStatement(prove);
-                ps.setInt(1, Cliente);
+                ps.setString(1, Cliente);
                 rs = ps.executeQuery();
                 if (rs.next()) {
                     proveedor.addCell(rs.getString("nombre"));
                     proveedor.addCell(rs.getString("telefono"));
-                    proveedor.addCell(rs.getString("direccion") + "\n\n");
+                    //proveedor.addCell(rs.getString("direccion") + "\n\n");
                 } else {
                     proveedor.addCell("Publico en General");
                     proveedor.addCell("S/N");
