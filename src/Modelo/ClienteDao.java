@@ -87,7 +87,7 @@ public class ClienteDao {
    }
    
    public boolean ModificarCliente(Cliente cl){
-       String sql = "UPDATE clientes SET dni=?, nombre=?, telefono=?, direccion=? WHERE id=?";
+       String sql = "UPDATE clientes SET nombre=?, telefono=?, correo=? WHERE id=?";
        try {
            ps = con.prepareStatement(sql);   
            ps.setString(1, cl.getNombre());
