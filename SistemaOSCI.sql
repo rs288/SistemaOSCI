@@ -50,6 +50,12 @@ CREATE TABLE `configu` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `Configu`
+--
+
+INSERT INTO `configu` VALUES (1,'Equipo1',8183294020,'pedro de alba');
+
+--
 -- Table structure for table `detalle`
 --
 
