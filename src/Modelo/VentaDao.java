@@ -156,7 +156,9 @@ public class VentaDao {
             Date date = new Date();
             FileOutputStream archivo;
             String url = FileSystemView.getFileSystemView().getDefaultDirectory().getPath();
-            File salida = new File(url + "/venta.pdf");
+            String name = "/venta"+Integer.toString(idventa)+".pdf";
+            //File salida = new File(url + "/venta.pdf");
+            File salida = new File(url + name);
             archivo = new FileOutputStream(salida);
             Document doc = new Document();
             PdfWriter.getInstance(doc, archivo);
@@ -178,7 +180,7 @@ public class VentaDao {
             Encabezado.addCell("");
             //info empresa
             String config = "SELECT * FROM configu";
-            String mensaje = "";
+            //String mensaje = "Gracias Por su compra";
             try {
                 con = cn.getConnection();
                 ps = con.prepareStatement(config);
@@ -207,7 +209,7 @@ public class VentaDao {
             proveedor.setHorizontalAlignment(Element.ALIGN_LEFT);
             PdfPCell cliNom = new PdfPCell(new Phrase("Nombre", negrita));
             PdfPCell cliTel = new PdfPCell(new Phrase("Télefono", negrita));
-            PdfPCell cliDir = new PdfPCell(new Phrase("Dirección", negrita));
+            PdfPCell cliDir = new PdfPCell(new Phrase("Correo", negrita));
             cliNom.setBorder(Rectangle.NO_BORDER);
             cliTel.setBorder(Rectangle.NO_BORDER);
             cliDir.setBorder(Rectangle.NO_BORDER);
@@ -222,7 +224,7 @@ public class VentaDao {
                 if (rs.next()) {
                     proveedor.addCell(rs.getString("nombre"));
                     proveedor.addCell(rs.getString("telefono"));
-                    //proveedor.addCell(rs.getString("direccion") + "\n\n");
+                    proveedor.addCell(rs.getString("correo") + "\n\n");
                 } else {
                     proveedor.addCell("Publico en General");
                     proveedor.addCell("S/N");
@@ -275,19 +277,19 @@ public class VentaDao {
             doc.add(tabla);
             Paragraph info = new Paragraph();
             info.add(Chunk.NEWLINE);
-            info.add("Total S/: " + total);
+            info.add("Total $/: " + total);
             info.setAlignment(Element.ALIGN_RIGHT);
             doc.add(info);
             Paragraph firma = new Paragraph();
             firma.add(Chunk.NEWLINE);
-            firma.add("Cancelacion \n\n");
+            firma.add("Pago \n\n");
             firma.add("------------------------------------\n");
             firma.add("Firma \n");
             firma.setAlignment(Element.ALIGN_CENTER);
             doc.add(firma);
             Paragraph gr = new Paragraph();
             gr.add(Chunk.NEWLINE);
-            gr.add(mensaje);
+           // gr.add(mensaje);
             gr.setAlignment(Element.ALIGN_CENTER);
             doc.add(gr);
             doc.close();

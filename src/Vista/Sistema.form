@@ -3,6 +3,12 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[810, 530]"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[810, 530]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -200,7 +206,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Vida Informatico"/>
+            <Property name="text" type="java.lang.String" value="Equipo1"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -211,7 +217,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="100" width="660" height="400"/>
+          <AbsoluteConstraints x="140" y="100" width="650" height="400"/>
         </Constraint>
       </Constraints>
 
@@ -220,7 +226,10 @@
         <Container class="javax.swing.JPanel" name="NuevaVenta">
           <Properties>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[660, 373]"/>
+              <Dimension value="[760, 373]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[760, 373]"/>
             </Property>
           </Properties>
           <Constraints>
@@ -240,7 +249,7 @@
                           <Component id="txtCodigoVenta" alignment="0" min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="codigo_NuevaVenta" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="119" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Descripcion__NuevaVenta" min="-2" max="-2" attributes="0"/>
                           <Component id="txtDescripcionVenta" min="-2" pref="145" max="-2" attributes="0"/>
@@ -255,9 +264,14 @@
                           <Component id="Precio_NuevaVenta" min="-2" max="-2" attributes="0"/>
                           <Component id="txtPrecioVenta" min="-2" pref="64" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="119" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="StockDis_NuevaVenta" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="StockDis_NuevaVenta" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtIdPro" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
                               <Component id="txtStockDisponible" pref="99" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
@@ -300,9 +314,9 @@
                               <Component id="btnGenerarVenta" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                               <Component id="TotalAPagar_NuevaVenta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Component id="LabelTotal" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="26" pref="260" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -334,6 +348,8 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtIdPro" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnEliminarVenta" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -360,10 +376,9 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btnGenerarVenta" min="-2" max="-2" attributes="0"/>
-                                  <Component id="TotalAPagar_NuevaVenta" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Component id="LabelTotal" min="-2" max="-2" attributes="0"/>
+                                      <Component id="TotalAPagar_NuevaVenta" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -446,17 +461,18 @@
                 <Component class="javax.swing.JTable" name="TableVenta">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
-                        <Column editable="false" title="CODIGO" type="java.lang.Object"/>
+                      <Table columnCount="6" rowCount="0">
+                        <Column editable="false" title="ID" type="java.lang.Object"/>
                         <Column editable="false" title="DESCRIPCION" type="java.lang.Object"/>
                         <Column editable="false" title="CANTIDAD" type="java.lang.Object"/>
                         <Column editable="false" title="PRECIO" type="java.lang.Object"/>
                         <Column editable="false" title="TOTAL" type="java.lang.Object"/>
+                        <Column editable="false" title="CODIGO" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="30" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="10" resizable="true">
                           <Title/>
                           <Editor/>
                           <Renderer/>
@@ -481,7 +497,15 @@
                           <Editor/>
                           <Renderer/>
                         </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                       </TableColumnModel>
+                    </Property>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[300, 0]"/>
                     </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -577,6 +601,8 @@
                 <Property name="text" type="java.lang.String" value="Correo"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JTextField" name="txtIdPro">
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="Clientes">
@@ -602,7 +628,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="Nombre_ventas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtNombreCliente" min="-2" pref="109" max="-2" attributes="0"/>
+                              <Component id="txtNombreCliente" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="Telefono_ventas" min="-2" max="-2" attributes="0"/>
@@ -629,7 +655,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="256" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="ScrollCliente" min="-2" pref="430" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -861,38 +887,38 @@
                                   <Component id="btnNuevoProveedor" max="32767" attributes="0"/>
                                   <Component id="btnEliminarProveedor" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Direccion_Proveedor" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtDireccionProveedor" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Telefono_Proveedor" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtTelefonoProveedor" max="32767" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="Nombre_Proveedor" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="txtNombreProveedor" max="32767" attributes="0"/>
+                                      <Component id="txtNombreProveedor" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="Numero_Proveedor" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="txtIdProveedor" min="-2" pref="64" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="253" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Telefono_Proveedor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Direccion_Proveedor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtDireccionProveedor" pref="100" max="32767" attributes="0"/>
+                                          <Component id="txtTelefonoProveedor" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="ScrollProveedor" min="-2" pref="428" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ScrollProveedor" pref="423" max="32767" attributes="0"/>
+                      <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -937,7 +963,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <EmptySpace pref="39" max="32767" attributes="0"/>
                       <Component id="ScrollProveedor" min="-2" pref="309" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   </Group>
@@ -990,6 +1016,9 @@
             <Component class="javax.swing.JTextField" name="txtTelefonoProveedor">
             </Component>
             <Component class="javax.swing.JTextField" name="txtDireccionProveedor">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDireccionProveedorActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnEditarProveedor">
               <Properties>
@@ -1042,7 +1071,7 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="0">
-                        <Column editable="false" title="# PROVEEDOR" type="java.lang.Object"/>
+                        <Column editable="false" title="Id" type="java.lang.Object"/>
                         <Column editable="false" title="NOMBRE" type="java.lang.Object"/>
                         <Column editable="false" title="TELEFONO" type="java.lang.Object"/>
                         <Column editable="false" title="DIRECCION" type="java.lang.Object"/>
@@ -1050,7 +1079,7 @@
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="40" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="15" resizable="true">
                           <Title/>
                           <Editor/>
                           <Renderer/>
@@ -1071,6 +1100,9 @@
                           <Renderer/>
                         </Column>
                       </TableColumnModel>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[220, 0]"/>
                     </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -1099,56 +1131,53 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="Descripcion_Productos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txtDescripcionPro" min="-2" pref="115" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="Precio_Producto" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtPrecioPro" min="-2" pref="109" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Cantidad_Productos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtCantidadPro" min="-2" pref="109" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="nombreProveedor_Producto" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="cbxProveedorPro" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="btnNuevoPro" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnGuardarPro" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="btnNuevoPro" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnGuardarPro" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="btnEditarPro" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnEliminarPro" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="btnEditarPro" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnEliminarPro" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Descripcion_Productos" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="txtDescripcionPro" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="Precio_Producto" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtPrecioPro" min="-2" pref="109" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="btnEcxelPro" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Cantidad_Productos" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtCantidadPro" min="-2" pref="109" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Codigo_Productos" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtCodigoPro" min="-2" pref="104" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtIdproducto" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Codigo_Productos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtCodigoPro" min="-2" pref="104" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtIdproducto" min="-2" pref="25" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Component id="ScrollProducto" pref="413" max="32767" attributes="0"/>
+                      <Component id="ScrollProducto" pref="390" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1186,16 +1215,13 @@
                               </Group>
                               <EmptySpace pref="33" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="btnEliminarPro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnEditarPro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="btnEditarPro" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnGuardarPro" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btnNuevoPro" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnEcxelPro" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarPro" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -1323,6 +1349,9 @@
                         </Column>
                       </TableColumnModel>
                     </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[285, 0]"/>
+                    </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
@@ -1363,13 +1392,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarProActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEcxelPro">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Img/excel.png"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="btnEditarPro">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -1388,6 +1410,11 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="Ventas">
+          <Properties>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[867, 373]"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Ventas">
@@ -1401,7 +1428,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="ScrollVentas" pref="855" max="32767" attributes="0"/>
+                      <Component id="ScrollVentas" pref="638" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -1527,7 +1554,7 @@
                               <Component id="btnActualizarConfig" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="460" max="32767" attributes="0"/>
+                      <EmptySpace pref="243" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
