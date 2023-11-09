@@ -620,9 +620,7 @@ public class Sistema extends javax.swing.JFrame {
             .addGroup(NuevaVentaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(NuevaVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(NuevaVentaLayout.createSequentialGroup()
-                        .addComponent(ScrollVenta)
-                        .addContainerGap())
+                    .addComponent(ScrollVenta)
                     .addGroup(NuevaVentaLayout.createSequentialGroup()
                         .addGroup(NuevaVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(NuevaVentaLayout.createSequentialGroup()
@@ -647,7 +645,8 @@ public class Sistema extends javax.swing.JFrame {
                         .addComponent(TotalAPagar_NuevaVenta)
                         .addGap(31, 31, 31)
                         .addComponent(LabelTotal)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         NuevaVentaLayout.setVerticalGroup(
             NuevaVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1194,7 +1193,7 @@ public class Sistema extends javax.swing.JFrame {
 
         Contenedor.addTab("Productos", Productos);
 
-        Ventas.setMinimumSize(new java.awt.Dimension(867, 373));
+        Ventas.setMinimumSize(new java.awt.Dimension(900, 373));
 
         TableVentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

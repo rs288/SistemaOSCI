@@ -163,7 +163,7 @@ public class VentaDao {
             Document doc = new Document();
             PdfWriter.getInstance(doc, archivo);
             doc.open();
-            Image img = Image.getInstance(getClass().getResource("/Img/logo_pdf.png"));
+            Image img = Image.getInstance(getClass().getResource("/Img/OSCI1.png"));  
             //Fecha
             Paragraph fecha = new Paragraph();
             Font negrita = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLUE);
@@ -198,7 +198,7 @@ public class VentaDao {
             //cliente
             Paragraph cli = new Paragraph();
             cli.add(Chunk.NEWLINE);
-            cli.add("DATOS DEL CLIENTE" + "\n\n");
+            cli.add("DATOS DEL CLIENTE" + "\n");
             doc.add(cli);
 
             PdfPTable proveedor = new PdfPTable(3);
@@ -277,12 +277,12 @@ public class VentaDao {
             doc.add(tabla);
             Paragraph info = new Paragraph();
             info.add(Chunk.NEWLINE);
-            info.add("Total $/: " + total);
+            info.add("Total: $" + total);
             info.setAlignment(Element.ALIGN_RIGHT);
             doc.add(info);
             Paragraph firma = new Paragraph();
             firma.add(Chunk.NEWLINE);
-            firma.add("Pago \n\n");
+            //firma.add("Pago \n\n");
             firma.add("------------------------------------\n");
             firma.add("Firma \n");
             firma.setAlignment(Element.ALIGN_CENTER);
